@@ -57,11 +57,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AreaHandler.cs" />
+    <Compile Include="AreaLineaHandler.cs" />
+    <Compile Include="GradoHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TokenGenerator.cs" />
+    <Compile Include="UnidadHandler.cs" />
+    <Compile Include="UsuarioHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ponal.Dinae.Estic.Sicei.DataAccess\Ponal.Dinae.Estic.Sicei.DataAccess.csproj">
+      <Project>{33FCF020-8C10-4695-B3BA-C6E62907C468}</Project>
+      <Name>Ponal.Dinae.Estic.Sicei.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ponal.Dinae.Estic.Sicei.Entities\Ponal.Dinae.Estic.Sicei.Entities.csproj">
+      <Project>{FDA3D569-DED0-44F9-B98D-6AC5D1882A1F}</Project>
+      <Name>Ponal.Dinae.Estic.Sicei.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

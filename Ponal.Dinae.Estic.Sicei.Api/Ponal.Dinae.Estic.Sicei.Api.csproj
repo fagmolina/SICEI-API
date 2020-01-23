@@ -108,7 +108,12 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AreaController.cs" />
+    <Compile Include="Controllers\AreaLineaController.cs" />
+    <Compile Include="Controllers\GradoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UnidadController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -131,6 +136,10 @@
     <ProjectReference Include="..\Ponal.Dinae.Estic.Sicei.Business\Ponal.Dinae.Estic.Sicei.Business.csproj">
       <Project>{382FFB46-90FC-43DA-AD80-BCDF07753D99}</Project>
       <Name>Ponal.Dinae.Estic.Sicei.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ponal.Dinae.Estic.Sicei.DataAccess\Ponal.Dinae.Estic.Sicei.DataAccess.csproj">
+      <Project>{33FCF020-8C10-4695-B3BA-C6E62907C468}</Project>
+      <Name>Ponal.Dinae.Estic.Sicei.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ponal.Dinae.Estic.Sicei.Entities\Ponal.Dinae.Estic.Sicei.Entities.csproj">
       <Project>{FDA3D569-DED0-44F9-B98D-6AC5D1882A1F}</Project>

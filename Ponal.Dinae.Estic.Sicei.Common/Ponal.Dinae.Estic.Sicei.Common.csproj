@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FDA3D569-DED0-44F9-B98D-6AC5D1882A1F}</ProjectGuid>
+    <ProjectGuid>{898E644D-3477-4265-9430-89F0FEE3862A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ponal.Dinae.Estic.Sicei.Entities</RootNamespace>
-    <AssemblyName>Ponal.Dinae.Estic.Sicei.Entities</AssemblyName>
+    <RootNamespace>Ponal.Dinae.Estic.Sicei.Common</RootNamespace>
+    <AssemblyName>Ponal.Dinae.Estic.Sicei.Common</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,22 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\AreaDTO.cs" />
-    <Compile Include="DTO\AreaLineaDTO.cs" />
-    <Compile Include="DTO\GradoDTO.cs" />
-    <Compile Include="DTO\ParametroDTO.cs" />
-    <Compile Include="DTO\ProcedimientoParametroDTO.cs" />
-    <Compile Include="DTO\RespuestaDTO.cs" />
-    <Compile Include="DTO\UnidadDTO.cs" />
-    <Compile Include="DTO\UsuarioDTO.cs" />
-    <Compile Include="LoginRequest.cs" />
+    <Compile Include="Enums\DireccionParametro.cs" />
+    <Compile Include="Enums\TipoParametro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ponal.Dinae.Estic.Sicei.Common\Ponal.Dinae.Estic.Sicei.Common.csproj">
-      <Project>{898e644d-3477-4265-9430-89f0fee3862a}</Project>
-      <Name>Ponal.Dinae.Estic.Sicei.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

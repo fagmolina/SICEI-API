@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.779
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ponal.Dinae.Estic.Sicei.Api", "Ponal.Dinae.Estic.Sicei.Api\Ponal.Dinae.Estic.Sicei.Api.csproj", "{0B3CCE51-4DB4-4063-B3CB-C0FF080CE8B0}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ponal.Dinae.Estic.Sicei.Entities", "Ponal.Dinae.Estic.Sicei.Entities\Ponal.Dinae.Estic.Sicei.Entities.csproj", "{FDA3D569-DED0-44F9-B98D-6AC5D1882A1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ponal.Dinae.Estic.Sicei.DataAccess", "Ponal.Dinae.Estic.Sicei.DataAccess\Ponal.Dinae.Estic.Sicei.DataAccess.csproj", "{33FCF020-8C10-4695-B3BA-C6E62907C468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ponal.Dinae.Estic.Sicei.Common", "Ponal.Dinae.Estic.Sicei.Common\Ponal.Dinae.Estic.Sicei.Common.csproj", "{898E644D-3477-4265-9430-89F0FEE3862A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{33FCF020-8C10-4695-B3BA-C6E62907C468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33FCF020-8C10-4695-B3BA-C6E62907C468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33FCF020-8C10-4695-B3BA-C6E62907C468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{898E644D-3477-4265-9430-89F0FEE3862A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{898E644D-3477-4265-9430-89F0FEE3862A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{898E644D-3477-4265-9430-89F0FEE3862A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{898E644D-3477-4265-9430-89F0FEE3862A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,7 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.6.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,7 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseRepository.cs" />
+    <Compile Include="Base\UOW.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AreaLineaRepository.cs" />
+    <Compile Include="Repositories\AreaRepository.cs" />
+    <Compile Include="Repositories\GradoRepository.cs" />
+    <Compile Include="Repositories\UnidadRepository.cs" />
+    <Compile Include="Repositories\UsuarioRepository.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ponal.Dinae.Estic.Sicei.Common\Ponal.Dinae.Estic.Sicei.Common.csproj">
+      <Project>{898e644d-3477-4265-9430-89f0fee3862a}</Project>
+      <Name>Ponal.Dinae.Estic.Sicei.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ponal.Dinae.Estic.Sicei.Entities\Ponal.Dinae.Estic.Sicei.Entities.csproj">
+      <Project>{FDA3D569-DED0-44F9-B98D-6AC5D1882A1F}</Project>
+      <Name>Ponal.Dinae.Estic.Sicei.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
