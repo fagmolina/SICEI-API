@@ -1,4 +1,5 @@
 ﻿using Ponal.Dinae.Estic.Sicei.DataAccess.Base;
+using Ponal.Dinae.Estic.Sicei.Entities;
 using Ponal.Dinae.Estic.Sicei.Entities.DTO;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,16 @@ namespace Ponal.Dinae.Estic.Sicei.Business
             using (uow = new UOW())
             {
                 var resultado = uow.UsuarioRepository.ConsultaUsuarios();
+                return resultado;
+            }
+        }
+
+
+        public int Login(LoginRequest user)
+        {
+            using (uow = new UOW())
+            {
+                var resultado = uow.UsuarioRepository.Login(user);
                 return resultado;
             }
         }

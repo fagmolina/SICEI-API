@@ -1,5 +1,6 @@
 ﻿using Ponal.Dinae.Estic.Sicei.Common.Enums;
 using Ponal.Dinae.Estic.Sicei.DataAccess.Base;
+using Ponal.Dinae.Estic.Sicei.Entities;
 using Ponal.Dinae.Estic.Sicei.Entities.DTO;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,24 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
                 throw new Exception();
             }
             return respuesta;
+
+        }
+
+
+        public int Login(LoginRequest  user)
+        {
+            ProcedimientoParametroDTO parametro = new ProcedimientoParametroDTO();
+
+            parametro.NombreProcedimiento = "PKG_LOGIN.prc_acceso";
+            parametro.AdicionarParametro(":p_documento", user.Username, DireccionParametro.Input, TipoParametro.Varchar2);
+            parametro.AdicionarParametro(":p_contrasena", user.Password, DireccionParametro.Input, TipoParametro.Varchar2);
+            parametro.AdicionarParametro(":p_respuesta", null, DireccionParametro.Output, TipoParametro.Int32);
+            var respuesta = EjecutarProcedure<Int32>(parametro);
+            if (respuesta == null)
+            {
+                throw new Exception();
+            }
+            return respuesta.FirstOrDefault();
 
         }
 

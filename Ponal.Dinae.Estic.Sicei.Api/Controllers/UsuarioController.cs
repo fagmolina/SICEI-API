@@ -1,4 +1,5 @@
 ﻿using Ponal.Dinae.Estic.Sicei.Business;
+using Ponal.Dinae.Estic.Sicei.Entities;
 using Ponal.Dinae.Estic.Sicei.Entities.DTO;
 using System;
 using System.Collections.Generic;
@@ -30,5 +31,18 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
             return Content(HttpStatusCode.OK, handler.CrearModificarUsuario(user));
 
         }
+
+
+        [HttpPost]
+        [Route("Login")]
+        public IHttpActionResult Login([FromBody] LoginRequest user)
+        {
+            UsuarioHandler handler = new UsuarioHandler();
+            List<UsuarioDTO> users = handler.ConsultaUsuarios().ToList();
+            var usuario = users.Find(x => x.DOCUMENTO == user.Username && x.CONTRASENA == user.Password);
+            return Content(HttpStatusCode.OK, usuario);
+
+        }
+
     }
 }
