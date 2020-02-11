@@ -22,7 +22,9 @@ namespace Ponal.Dinae.Estic.Sicei.Entities.DTO
         public string EMAIL { get; set; }
         public string CONTRASENA { get; set; }
 
-        public decimal ADMINISTRADOR { get; set; }
+        public string TELEFONO { get; set; }
+        public string USUARIO { get; set; }
+        public decimal PERFIL { get; set; }
 
     }
 }

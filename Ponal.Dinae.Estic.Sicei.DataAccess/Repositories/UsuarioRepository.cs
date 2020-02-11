@@ -59,7 +59,9 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
             parametro.AdicionarParametro(":p_id_unidad", user.ID_UNIDAD, DireccionParametro.Input, TipoParametro.Int32);
             parametro.AdicionarParametro(":p_email", user.EMAIL, DireccionParametro.Input, TipoParametro.Varchar2, 255);
             parametro.AdicionarParametro(":p_contrasena", user.CONTRASENA, DireccionParametro.Input, TipoParametro.Varchar2, 255);
-            parametro.AdicionarParametro(":p_administrador", user.ADMINISTRADOR, DireccionParametro.Input, TipoParametro.Int32);
+            parametro.AdicionarParametro(":p_telefono", user.TELEFONO, DireccionParametro.Input, TipoParametro.Varchar2);
+            parametro.AdicionarParametro(":p_usuario", user.USUARIO, DireccionParametro.Input, TipoParametro.Varchar2);
+            parametro.AdicionarParametro(":p_perfil", user.PERFIL, DireccionParametro.Input, TipoParametro.Decimal);
             parametro.AdicionarParametro(":p_mensaje", null, DireccionParametro.Output, TipoParametro.Varchar2);
             EjecutarProcedure<RespuestaDTO>(parametro);
 

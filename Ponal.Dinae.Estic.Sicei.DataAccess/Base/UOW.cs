@@ -15,6 +15,19 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Base
         private AreaRepository _areaRepository;
         private AreaLineaRepository _areaLineaRepository;
         private GradoRepository _gradoRepository;
+        private InvestigacionRepository _investigacionRepository;
+
+        public InvestigacionRepository InvestigacionRepository
+        {
+            get
+            {
+                if (_investigacionRepository == null)
+                {
+                    _investigacionRepository = new InvestigacionRepository();
+                }
+                return _investigacionRepository;
+            }
+        }
 
         public UnidadRepository Unidadrepository
         {

@@ -51,6 +51,7 @@
     <Compile Include="Repositories\AreaLineaRepository.cs" />
     <Compile Include="Repositories\AreaRepository.cs" />
     <Compile Include="Repositories\GradoRepository.cs" />
+    <Compile Include="Repositories\InvestigacionRepository.cs" />
     <Compile Include="Repositories\UnidadRepository.cs" />
     <Compile Include="Repositories\UsuarioRepository.cs" />
   </ItemGroup>
