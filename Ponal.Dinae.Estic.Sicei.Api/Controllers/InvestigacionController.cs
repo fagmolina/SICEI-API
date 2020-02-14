@@ -15,7 +15,7 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
     /// 
     /// </summary>
     [RoutePrefix("api/Investigacion")]
-    public class InvestigacionController: ApiController
+    public class InvestigacionController : ApiController
     {
         /// <summary>
         /// 
@@ -30,7 +30,7 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
             {
                 return Content(HttpStatusCode.OK, handler.ConsultarInvestigaciones());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return Content(HttpStatusCode.InternalServerError, ex.Message);
             }
@@ -51,6 +51,25 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
                 return Content(HttpStatusCode.OK, handler.MergeInvestigacion(investigacion));
             }
             catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("ConsultarInvestigadores")]
+        public IHttpActionResult ConsultarInvestigadores()
+        {
+            InvestigacionHandler handler = new InvestigacionHandler();
+            try
+            {
+                return Content(HttpStatusCode.OK, handler.ConsultarInvestigadores());
+            }
+            catch(Exception ex)
             {
                 return Content(HttpStatusCode.InternalServerError, ex.Message);
             }

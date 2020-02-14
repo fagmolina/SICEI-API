@@ -45,6 +45,7 @@
     <Compile Include="DTO\AreaLineaDTO.cs" />
     <Compile Include="DTO\GradoDTO.cs" />
     <Compile Include="DTO\InvestigacionDTO.cs" />
+    <Compile Include="DTO\InvestigadorDTO.cs" />
     <Compile Include="DTO\ParametroDTO.cs" />
     <Compile Include="DTO\ProcedimientoParametroDTO.cs" />
     <Compile Include="DTO\RespuestaDTO.cs" />

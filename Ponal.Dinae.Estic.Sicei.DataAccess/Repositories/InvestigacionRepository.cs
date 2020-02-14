@@ -50,5 +50,22 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
             }
             return respuesta;
         }
+
+        public IEnumerable<InvestigadorDTO> ConsultarInvestigadores()
+        {
+            ProcedimientoParametroDTO parametro = new ProcedimientoParametroDTO();
+
+            parametro.NombreProcedimiento = "PKG_CRUDS.prc_get_investigador";
+
+
+            parametro.AdicionarParametro(":P_RESULTADO", null, DireccionParametro.Output, TipoParametro.RefCursor);
+
+            var respuesta = EjecutarProcedure<InvestigadorDTO>(parametro);
+            if (respuesta == null)
+            {
+                throw new Exception();
+            }
+            return respuesta;
+        }
     }
 }
