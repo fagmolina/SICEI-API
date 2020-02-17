@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ponal.Dinae.Estic.Sicei.Business;
+using Ponal.Dinae.Estic.Sicei.Entities.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -20,10 +22,29 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
         [Route("ConsultarCasosEmblem")]
         public IHttpActionResult ConsultarCasosEmblem()
         {
-            CasoEmblematicoController handler = new CasoEmblematicoController();
+            CasoEmblematicoHandler handler = new CasoEmblematicoHandler();
             try
             {
                 return Content(HttpStatusCode.OK, handler.ConsultarCasosEmblem());
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("MergeCasoEmblematico")]
+        public IHttpActionResult MergeCasoEmblematico(CasoEmblematicoBaseDTO caso)
+        {
+            CasoEmblematicoHandler handler = new CasoEmblematicoHandler();
+            try
+            {
+                return Content(HttpStatusCode.OK, handler.MergeCasoEmblematico(caso));
             }
             catch (Exception ex)
             {

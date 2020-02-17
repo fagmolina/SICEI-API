@@ -43,12 +43,15 @@
   <ItemGroup>
     <Compile Include="DTO\AreaDTO.cs" />
     <Compile Include="DTO\AreaLineaDTO.cs" />
+    <Compile Include="DTO\CasoEmblematicoBaseDTO.cs" />
+    <Compile Include="DTO\CasoEmblematicoDTO.cs" />
     <Compile Include="DTO\GradoDTO.cs" />
     <Compile Include="DTO\InvestigacionDTO.cs" />
     <Compile Include="DTO\InvestigadorDTO.cs" />
     <Compile Include="DTO\ParametroDTO.cs" />
     <Compile Include="DTO\ProcedimientoParametroDTO.cs" />
     <Compile Include="DTO\RespuestaDTO.cs" />
+    <Compile Include="DTO\ResultDTO.cs" />
     <Compile Include="DTO\UnidadDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="LoginRequest.cs" />

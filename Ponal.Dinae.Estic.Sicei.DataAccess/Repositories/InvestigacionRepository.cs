@@ -58,7 +58,7 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
             parametro.NombreProcedimiento = "PKG_CRUDS.prc_get_investigador";
 
 
-            parametro.AdicionarParametro(":P_RESULTADO", null, DireccionParametro.Output, TipoParametro.RefCursor);
+            parametro.AdicionarParametro(":p_resultado", null, DireccionParametro.Output, TipoParametro.RefCursor);
 
             var respuesta = EjecutarProcedure<InvestigadorDTO>(parametro);
             if (respuesta == null)

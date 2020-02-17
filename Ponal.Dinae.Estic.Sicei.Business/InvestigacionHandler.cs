@@ -29,11 +29,11 @@ namespace Ponal.Dinae.Estic.Sicei.Business
             }
         }
 
-        public IEnumerable<InvestigadorDTO> ConsultarInvestigadores()
+        public List<InvestigadorDTO> ConsultarInvestigadores()
         {
             using (uow = new UOW())
             {
-                var resultado = uow.InvestigacionRepository.ConsultarInvestigadores();
+                var resultado = uow.InvestigacionRepository.ConsultarInvestigadores().ToList();
                 return resultado;
             }
         }
