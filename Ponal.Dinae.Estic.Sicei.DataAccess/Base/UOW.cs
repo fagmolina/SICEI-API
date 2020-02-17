@@ -16,6 +16,7 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Base
         private AreaLineaRepository _areaLineaRepository;
         private GradoRepository _gradoRepository;
         private InvestigacionRepository _investigacionRepository;
+        private CasoEmblematicoRepository _casoEmlemRepository;
 
         public InvestigacionRepository InvestigacionRepository
         {
@@ -88,6 +89,18 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Base
                     _gradoRepository = new GradoRepository();
                 }
                 return _gradoRepository;
+            }
+        }
+
+        public CasoEmblematicoRepository CasoEmblemRepository
+        {
+            get
+            {
+                if (_casoEmlemRepository == null)
+                {
+                    _casoEmlemRepository = new CasoEmblematicoRepository();
+                }
+                return _casoEmlemRepository;
             }
         }
 

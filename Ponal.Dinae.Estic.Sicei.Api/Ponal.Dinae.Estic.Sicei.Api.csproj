@@ -117,6 +117,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AreaController.cs" />
     <Compile Include="Controllers\AreaLineaController.cs" />
+    <Compile Include="Controllers\CasoEmblematicoController.cs" />
     <Compile Include="Controllers\GradoController.cs" />
     <Compile Include="Controllers\InvestigacionController.cs" />
     <Compile Include="Controllers\LoginController.cs" />

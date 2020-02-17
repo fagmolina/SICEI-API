@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="AreaHandler.cs" />
     <Compile Include="AreaLineaHandler.cs" />
+    <Compile Include="CasoEmblematicoHandler.cs" />
     <Compile Include="GradoHandler.cs" />
     <Compile Include="InvestigacionHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

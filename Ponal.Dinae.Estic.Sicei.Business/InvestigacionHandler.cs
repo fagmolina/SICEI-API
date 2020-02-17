@@ -37,5 +37,14 @@ namespace Ponal.Dinae.Estic.Sicei.Business
                 return resultado;
             }
         }
+
+        public IEnumerable<object> ConsultarCasosEmblem()
+        {
+            using (uow = new UOW())
+            {
+                var resultado = uow.CasoEmblemRepository.ConsultarCasosEmblem();
+                return resultado;
+            }
+        }
     }
 }
