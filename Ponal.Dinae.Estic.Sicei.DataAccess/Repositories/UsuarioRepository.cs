@@ -52,16 +52,16 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
             parametro.NombreProcedimiento = "PKG_CRUDS.prc_merge_usuarios";
             parametro.AdicionarParametro(":p_id_usuario", user.ID_USUARIO, DireccionParametro.Input, TipoParametro.Int32);
             parametro.AdicionarParametro(":p_id_tipo_documento", user.ID_TIPO_DOCUMENTO, DireccionParametro.Input, TipoParametro.Int32);
-            parametro.AdicionarParametro(":p_documento", user.DOCUMENTO, DireccionParametro.Input, TipoParametro.Varchar2, 255);
-            parametro.AdicionarParametro(":p_nombres", user.NOMBRES, DireccionParametro.Input, TipoParametro.Varchar2, 255);
-            parametro.AdicionarParametro(":p_apellidos", user.APELLIDOS, DireccionParametro.Input, TipoParametro.Varchar2, 255);
+            parametro.AdicionarParametro(":p_documento", user.DOCUMENTO, DireccionParametro.Input, TipoParametro.Varchar2);
+            parametro.AdicionarParametro(":p_nombres", user.NOMBRES, DireccionParametro.Input, TipoParametro.Varchar2);
+            parametro.AdicionarParametro(":p_apellidos", user.APELLIDOS, DireccionParametro.Input, TipoParametro.Varchar2);
             parametro.AdicionarParametro(":p_id_grado", user.ID_GRADO, DireccionParametro.Input, TipoParametro.Int32);
             parametro.AdicionarParametro(":p_id_unidad", user.ID_UNIDAD, DireccionParametro.Input, TipoParametro.Int32);
-            parametro.AdicionarParametro(":p_email", user.EMAIL, DireccionParametro.Input, TipoParametro.Varchar2, 255);
-            parametro.AdicionarParametro(":p_contrasena", user.CONTRASENA, DireccionParametro.Input, TipoParametro.Varchar2, 255);
+            parametro.AdicionarParametro(":p_email", user.EMAIL, DireccionParametro.Input, TipoParametro.Varchar2);
+            parametro.AdicionarParametro(":p_contrasena", user.CONTRASENA, DireccionParametro.Input, TipoParametro.Varchar2);
             parametro.AdicionarParametro(":p_telefono", user.TELEFONO, DireccionParametro.Input, TipoParametro.Varchar2);
             parametro.AdicionarParametro(":p_usuario", user.USUARIO, DireccionParametro.Input, TipoParametro.Varchar2);
-            parametro.AdicionarParametro(":p_perfil", user.PERFIL, DireccionParametro.Input, TipoParametro.Decimal);
+            parametro.AdicionarParametro(":p_perfil", user.PERFIL, DireccionParametro.Input, TipoParametro.Int32);
             parametro.AdicionarParametro(":p_mensaje", null, DireccionParametro.Output, TipoParametro.Varchar2);
             EjecutarProcedure<RespuestaDTO>(parametro);
 
