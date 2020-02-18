@@ -17,6 +17,7 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Base
         private GradoRepository _gradoRepository;
         private InvestigacionRepository _investigacionRepository;
         private CasoEmblematicoRepository _casoEmlemRepository;
+        private RedInvestigacionRepository _redInvestigacionRepository;
 
         public InvestigacionRepository InvestigacionRepository
         {
@@ -104,6 +105,17 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Base
             }
         }
 
+        public RedInvestigacionRepository RedInvestigacionRepository
+        {
+            get
+            {
+                if(_redInvestigacionRepository == null)
+                {
+                    _redInvestigacionRepository = new RedInvestigacionRepository();
+                }
+                return _redInvestigacionRepository;
+            }
+        }
 
         #region IDisposable Support  
         private bool _disposedValue = false; // To detect redundant calls  

@@ -63,6 +63,7 @@
     <Compile Include="GradoHandler.cs" />
     <Compile Include="InvestigacionHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedInvestigacionHandler.cs" />
     <Compile Include="TokenGenerator.cs" />
     <Compile Include="UnidadHandler.cs" />
     <Compile Include="UsuarioHandler.cs" />

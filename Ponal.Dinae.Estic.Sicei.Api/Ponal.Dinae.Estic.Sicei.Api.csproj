@@ -121,6 +121,7 @@
     <Compile Include="Controllers\GradoController.cs" />
     <Compile Include="Controllers\InvestigacionController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RedInvestigacionController.cs" />
     <Compile Include="Controllers\UnidadController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
