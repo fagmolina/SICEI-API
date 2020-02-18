@@ -53,6 +53,7 @@
     <Compile Include="DTO\RedInvestigacionBaseDTO.cs" />
     <Compile Include="DTO\RespuestaDTO.cs" />
     <Compile Include="DTO\ResultDTO.cs" />
+    <Compile Include="DTO\TipoDTO.cs" />
     <Compile Include="DTO\UnidadDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="LoginRequest.cs" />

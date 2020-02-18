@@ -1,4 +1,5 @@
 ﻿using Ponal.Dinae.Estic.Sicei.Business;
+using Ponal.Dinae.Estic.Sicei.Entities.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,24 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
         {
             UnidadHandler handler = new UnidadHandler();
             return Content(HttpStatusCode.OK, handler.ConsultarUnidades());
+
+        }
+
+        [HttpGet]
+        [Route("ConsultaTipos")]
+        public IHttpActionResult ConsultaTipos()
+        {
+            UnidadHandler handler = new UnidadHandler();
+            return Content(HttpStatusCode.OK, handler.ConsultaTipos());
+
+        }
+
+        [HttpPost]
+        [Route("MergeUnidad")]
+        public IHttpActionResult MergeUnidad([FromBody] UnidadDTO unidad)
+        {
+            UnidadHandler handler = new UnidadHandler();
+            return Content(HttpStatusCode.OK, handler.MergeUnidad(unidad));
 
         }
     }

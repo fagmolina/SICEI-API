@@ -20,5 +20,23 @@ namespace Ponal.Dinae.Estic.Sicei.Business
             }
         }
 
+        public IEnumerable<TipoDTO> ConsultaTipos()
+        {
+            using (uow = new UOW())
+            {
+                var resultado = uow.Unidadrepository.ConsultaTipos();
+                return resultado;
+            }
+        }
+
+        public String MergeUnidad(UnidadDTO unidad)
+        {
+            using (uow = new UOW())
+            {
+                var resultado = uow.Unidadrepository.MergeUnidad(unidad);
+                return resultado;
+            }
+        }
+
     }
 }
