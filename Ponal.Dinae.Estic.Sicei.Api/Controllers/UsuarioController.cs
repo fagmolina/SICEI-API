@@ -41,7 +41,7 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
         {
             UsuarioHandler handler = new UsuarioHandler();
             List<UsuarioDTO> users = handler.ConsultaUsuarios().ToList();
-            var usuario = users.Find(x => x.USUARIO == user.Username && x.CONTRASENA == user.Password);
+            var usuario = users.Find(x => x.DOCUMENTO == user.Username && x.CONTRASENA == user.Password);
             return Content(HttpStatusCode.OK, usuario);
 
         }
