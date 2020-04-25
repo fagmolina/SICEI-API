@@ -10,10 +10,10 @@ using System.Web.Http.Cors;
 
 namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     /// <summary>
     /// 
     /// </summary>
+    [EnableCors(origins: "*", headers: "*", methods: "*")]   
     [RoutePrefix("api/Investigacion")]
     public class InvestigacionController : ApiController
     {
@@ -73,6 +73,15 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
             {
                 return Content(HttpStatusCode.InternalServerError, ex.Message);
             }
+        }
+
+
+        [HttpPost]
+        [Route("SetInvestigacionInstitucional")]
+        public IHttpActionResult SetInvestigacionInstitucional()
+        {
+
+            return null;
         }
     }
 }

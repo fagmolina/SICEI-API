@@ -11,10 +11,10 @@ using System.Web.Http.Cors;
 
 namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     /// <summary>
-    /// login controller class for authenticate users
+    /// 
     /// </summary>
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [AllowAnonymous]
     [RoutePrefix("api/login")]
     public class LoginController : ApiController

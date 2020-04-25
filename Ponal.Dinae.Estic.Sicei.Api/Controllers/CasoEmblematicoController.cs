@@ -10,6 +10,9 @@ using System.Web.Http.Cors;
 
 namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/casoEmblem")]
     public class CasoEmblematicoController : ApiController

@@ -32,5 +32,21 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
             }
             return respuesta;
         }
+
+        public IEnumerable<RedInvestigacionBaseDTO> GetRedes()
+        {
+            ProcedimientoParametroDTO parametro = new ProcedimientoParametroDTO();
+
+            parametro.NombreProcedimiento = "PKG_CRUDS_ADIC.PRC_GET_RED_INV";
+            
+            parametro.AdicionarParametro(":p_resultado", null, DireccionParametro.Output, TipoParametro.RefCursor);
+
+            var respuesta = EjecutarProcedure<RedInvestigacionBaseDTO>(parametro);
+            if (respuesta == null)
+            {
+                throw new Exception();
+            }
+            return respuesta;
+        }
     }
 }

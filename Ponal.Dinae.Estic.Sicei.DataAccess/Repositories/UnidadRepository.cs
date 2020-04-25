@@ -56,10 +56,10 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
 
             parametro.NombreProcedimiento = "PKG_CRUDS.PRC_MERGE_UNIDAD";
 
-            parametro.AdicionarParametro(":p_id_unidad", unidad.ID_UNIDAD, DireccionParametro.Input, TipoParametro.Int32);
+            parametro.AdicionarParametro(":p_id_unidad", unidad.ID_UNIDAD, DireccionParametro.Input, TipoParametro.Decimal);
             parametro.AdicionarParametro(":p_sigla", unidad.SIGLA, DireccionParametro.Input, TipoParametro.Varchar2);
             parametro.AdicionarParametro(":p_descripcion", unidad.DESCRIPCION, DireccionParametro.Input, TipoParametro.Varchar2);
-            parametro.AdicionarParametro(":p_id_tipo", unidad.ID_TIPO, DireccionParametro.Input, TipoParametro.Int32);
+            parametro.AdicionarParametro(":p_id_tipo", unidad.ID_TIPO, DireccionParametro.Input, TipoParametro.Decimal);
             parametro.AdicionarParametro(":p_mensaje", null, DireccionParametro.Output, TipoParametro.RefCursor);
 
             EjecutarProcedure<RespuestaDTO>(parametro);

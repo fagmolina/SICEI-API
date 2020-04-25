@@ -29,7 +29,7 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
         }
 
 
-        public int Login(LoginRequest  user)
+        public int Login(LoginRequest user)
         {
             ProcedimientoParametroDTO parametro = new ProcedimientoParametroDTO();
 
@@ -46,10 +46,10 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
 
         }
 
-        public string crearModificarUsuario(UsuarioDTO user)
+        public IEnumerable<ResultDTO> crearModificarUsuario(UsuarioDTO user)
         {
             ProcedimientoParametroDTO parametro = new ProcedimientoParametroDTO();
-            parametro.NombreProcedimiento = "PKG_CRUDS.prc_merge_usuarios";
+            parametro.NombreProcedimiento = "PKG_CRUDS.PRC_MERGE_USUARIOS";
             parametro.AdicionarParametro(":p_id_usuario", user.ID_USUARIO, DireccionParametro.Input, TipoParametro.Int32);
             parametro.AdicionarParametro(":p_id_tipo_documento", user.ID_TIPO_DOCUMENTO, DireccionParametro.Input, TipoParametro.Int32);
             parametro.AdicionarParametro(":p_documento", user.DOCUMENTO, DireccionParametro.Input, TipoParametro.Varchar2);
@@ -62,16 +62,30 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
             parametro.AdicionarParametro(":p_telefono", user.TELEFONO, DireccionParametro.Input, TipoParametro.Varchar2);
             parametro.AdicionarParametro(":p_usuario", user.USUARIO, DireccionParametro.Input, TipoParametro.Varchar2);
             parametro.AdicionarParametro(":p_perfil", user.PERFIL, DireccionParametro.Input, TipoParametro.Int32);
-            parametro.AdicionarParametro(":p_mensaje", null, DireccionParametro.Output, TipoParametro.Varchar2);
-            EjecutarProcedure<RespuestaDTO>(parametro);
+            parametro.AdicionarParametro(":p_resultado", null, DireccionParametro.Output, TipoParametro.RefCursor);
 
-            string respuesta = parametro.ArregloParametros.Find(x => x.Nombre.Equals(":p_mensaje")).Valor.ToString();
-            if (!respuesta.Equals("OK"))
+            var respuesta = EjecutarProcedure<ResultDTO>(parametro);
+            if (respuesta == null)
             {
-                throw new Exception(respuesta);
+                throw new Exception();
             }
             return respuesta;
 
+        }
+
+        public IEnumerable<ResultDTO> eliminarUsuario(int id)
+        {
+            ProcedimientoParametroDTO parametro = new ProcedimientoParametroDTO();
+            parametro.NombreProcedimiento = "PKG_CRUDS.PRC_DELETE_USUARIO";
+            parametro.AdicionarParametro(":p_id_usuario", id, DireccionParametro.Input, TipoParametro.Int32);
+            parametro.AdicionarParametro(":p_resultado", null, DireccionParametro.Output, TipoParametro.RefCursor);
+
+            var respuesta = EjecutarProcedure<ResultDTO>(parametro);
+            if (respuesta == null)
+            {
+                throw new Exception();
+            }
+            return respuesta;
         }
     }
 }

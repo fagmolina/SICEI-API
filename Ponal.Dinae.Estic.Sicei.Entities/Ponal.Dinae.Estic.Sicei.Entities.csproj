@@ -56,6 +56,13 @@
     <Compile Include="DTO\TipoDTO.cs" />
     <Compile Include="DTO\UnidadDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
+    <Compile Include="InvInstitucional\AreaLinea.cs" />
+    <Compile Include="InvInstitucional\Estimulos.cs" />
+    <Compile Include="InvInstitucional\Eventos.cs" />
+    <Compile Include="InvInstitucional\Investigarores.cs" />
+    <Compile Include="InvInstitucional\InvInstitucional.cs" />
+    <Compile Include="InvInstitucional\Presupuesto.cs" />
+    <Compile Include="InvInstitucional\Producto.cs" />
     <Compile Include="LoginRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

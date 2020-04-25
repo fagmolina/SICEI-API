@@ -109,6 +109,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Ponal.Dinae.Estic.Sicei.Api.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -120,7 +123,9 @@
     <Compile Include="Controllers\CasoEmblematicoController.cs" />
     <Compile Include="Controllers\GradoController.cs" />
     <Compile Include="Controllers\InvestigacionController.cs" />
+    <Compile Include="Controllers\InvestigadoresController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RedesController.cs" />
     <Compile Include="Controllers\RedInvestigacionController.cs" />
     <Compile Include="Controllers\UnidadController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -132,6 +137,7 @@
   <ItemGroup>
     <Content Include="libman.json" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -173,6 +179,8 @@
           <DevelopmentServerPort>60406</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:60406/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:60406/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

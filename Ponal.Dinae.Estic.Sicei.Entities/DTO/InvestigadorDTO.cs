@@ -10,6 +10,7 @@ namespace Ponal.Dinae.Estic.Sicei.Entities.DTO
     {
         public decimal ID_INVESTIGADOR { get; set; }
         public decimal ID_GRADO { get; set; }
+        public string DESC_GRADO { get; set; }
         public string DOCUMENTO { get; set; }
         public string NOMBRES { get; set; }
         public string APELLIDOS { get; set; }

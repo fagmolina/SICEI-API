@@ -22,6 +22,15 @@ namespace Ponal.Dinae.Estic.Sicei.Business
             }
         }
 
+        public IEnumerable<ResultDTO> EliminarUsuario(int id)
+        {
+            using (uow = new UOW())
+            {
+                var resultado = uow.UsuarioRepository.eliminarUsuario(id);
+                return resultado;
+            }
+        }
+
 
         public int Login(LoginRequest user)
         {
@@ -33,7 +42,7 @@ namespace Ponal.Dinae.Estic.Sicei.Business
         }
 
 
-        public String CrearModificarUsuario(UsuarioDTO  user)
+        public IEnumerable<ResultDTO> CrearModificarUsuario(UsuarioDTO  user)
         {
             using (uow = new UOW())
             {

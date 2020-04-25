@@ -26,5 +26,14 @@ namespace Ponal.Dinae.Estic.Sicei.Business
                 }
             }
         }
+
+        public IEnumerable<RedInvestigacionBaseDTO> ConsultaUsuarios()
+        {
+            using (uow = new UOW())
+            {
+                var resultado = uow.RedInvestigacionRepository.GetRedes();
+                return resultado;
+            }
+        }
     }
 }
