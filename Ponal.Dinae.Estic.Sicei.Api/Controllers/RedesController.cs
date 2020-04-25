@@ -13,19 +13,19 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
     /// 
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    [RoutePrefix("api/Grado")]
-    public class GradoController : ApiController
+    [RoutePrefix("api/Redes")]
+    public class RedesController : ApiController
     {
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("ConsultaGrados")]
-        public IHttpActionResult ConsultaGrados()
+        [Route("ConsultaRedes")]
+        public IHttpActionResult ConsultaRedes()
         {
-            GradoHandler handler = new GradoHandler();
-            return Content(HttpStatusCode.OK, handler.ConsultaGrados());
+            RedInvestigacionHandler handler = new RedInvestigacionHandler();
+            return Content(HttpStatusCode.OK, handler.ConsultaUsuarios());
 
         }
     }

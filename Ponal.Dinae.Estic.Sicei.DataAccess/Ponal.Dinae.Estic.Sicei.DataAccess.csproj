@@ -50,7 +50,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AreaLineaRepository.cs" />
     <Compile Include="Repositories\AreaRepository.cs" />
+    <Compile Include="Repositories\CasoEmblematicoRepository.cs" />
     <Compile Include="Repositories\GradoRepository.cs" />
+    <Compile Include="Repositories\InvestigacionRepository.cs" />
+    <Compile Include="Repositories\InvestigadorRepository.cs" />
+    <Compile Include="Repositories\RedInvestigacionRepository.cs" />
     <Compile Include="Repositories\UnidadRepository.cs" />
     <Compile Include="Repositories\UsuarioRepository.cs" />
   </ItemGroup>

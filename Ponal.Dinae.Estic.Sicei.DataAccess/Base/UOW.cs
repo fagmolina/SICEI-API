@@ -12,9 +12,25 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Base
 
         private UnidadRepository _unidadRepository;
         private UsuarioRepository _usuarioRepository;
+        private InvestigadorRepository _investigadoresRepository;
         private AreaRepository _areaRepository;
         private AreaLineaRepository _areaLineaRepository;
         private GradoRepository _gradoRepository;
+        private InvestigacionRepository _investigacionRepository;
+        private CasoEmblematicoRepository _casoEmlemRepository;
+        private RedInvestigacionRepository _redInvestigacionRepository;
+
+        public InvestigacionRepository InvestigacionRepository
+        {
+            get
+            {
+                if (_investigacionRepository == null)
+                {
+                    _investigacionRepository = new InvestigacionRepository();
+                }
+                return _investigacionRepository;
+            }
+        }
 
         public UnidadRepository Unidadrepository
         {
@@ -38,6 +54,18 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Base
                     _usuarioRepository = new UsuarioRepository();
                 }
                 return _usuarioRepository;
+            }
+        }
+
+        public InvestigadorRepository InvestigadorRepository
+        {
+            get
+            {
+                if (_investigadoresRepository == null)
+                {
+                    _investigadoresRepository = new InvestigadorRepository();
+                }
+                return _investigadoresRepository;
             }
         }
 
@@ -78,6 +106,29 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Base
             }
         }
 
+        public CasoEmblematicoRepository CasoEmblemRepository
+        {
+            get
+            {
+                if (_casoEmlemRepository == null)
+                {
+                    _casoEmlemRepository = new CasoEmblematicoRepository();
+                }
+                return _casoEmlemRepository;
+            }
+        }
+
+        public RedInvestigacionRepository RedInvestigacionRepository
+        {
+            get
+            {
+                if(_redInvestigacionRepository == null)
+                {
+                    _redInvestigacionRepository = new RedInvestigacionRepository();
+                }
+                return _redInvestigacionRepository;
+            }
+        }
 
         #region IDisposable Support  
         private bool _disposedValue = false; // To detect redundant calls  

@@ -8,32 +8,32 @@ using System.Threading.Tasks;
 
 namespace Ponal.Dinae.Estic.Sicei.Business
 {
-    public class UnidadHandler
+    public class InvestigadoresHandler
     {
         protected UOW uow { get; set; }
-        public IEnumerable<UnidadDTO> ConsultarUnidades()
+        public IEnumerable<InvestigadorDTO> ConsultaInvestigadores()
         {
             using (uow = new UOW())
             {
-                var resultado = uow.Unidadrepository.ConsultaUnidades();
+                var resultado = uow.InvestigadorRepository.ConsultaInvestigadores();
                 return resultado;
             }
         }
 
-        public IEnumerable<TipoDTO> ConsultaTipos()
+        public IEnumerable<ResultDTO> EliminarInvestigador(int id)
         {
             using (uow = new UOW())
             {
-                var resultado = uow.Unidadrepository.ConsultaTipos();
+                var resultado = uow.InvestigadorRepository.eliminarInvestigador(id);
                 return resultado;
             }
         }
 
-        public String MergeUnidad(UnidadDTO unidad)
+        public IEnumerable<ResultDTO> CrearModificarInvestigador(InvestigadorDTO investigador)
         {
             using (uow = new UOW())
             {
-                var resultado = uow.Unidadrepository.MergeUnidad(unidad);
+                var resultado = uow.InvestigadorRepository.crearModificarInvestigador(investigador);
                 return resultado;
             }
         }
