@@ -44,5 +44,7 @@ namespace Ponal.Dinae.Estic.Sicei.Entities.InvInstitucional
         public List<Presupuesto> Presupuesto { get; set; }
         #endregion
 
+
+
     }
 }
