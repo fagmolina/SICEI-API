@@ -15,5 +15,7 @@ namespace Ponal.Dinae.Estic.Sicei.Entities.InvInstitucional
         public string TipoRegion { get; set; }
         public string DescRegion { get; set; }
         public string DescSubRegion { get; set; }
+        public string Pais { get; set; }
+        public bool EsNacional { get; set; }
     }
 }

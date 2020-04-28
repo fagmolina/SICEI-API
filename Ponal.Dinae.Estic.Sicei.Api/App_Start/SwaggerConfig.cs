@@ -22,7 +22,7 @@ namespace Ponal.Dinae.Estic.Sicei.Api
             GlobalConfiguration.Configuration
               .EnableSwagger(c =>
               {
-                  c.SingleApiVersion("v1", "API Sistema de Información, Ciencia e Innovación");                  
+                  c.SingleApiVersion("v1", "API Sistema de Informaciï¿½n, Ciencia e Innovaciï¿½n");                  
                   c.IncludeXmlComments(string.Format(@"{0}\bin\Ponal.Dinae.Estic.Sicei.Api.xml",
                                        System.AppDomain.CurrentDomain.BaseDirectory));
               })

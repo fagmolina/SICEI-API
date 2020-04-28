@@ -28,7 +28,7 @@ namespace Ponal.Dinae.Estic.Sicei.Entities.InvInstitucional
         #endregion
 
         #region Producto
-        public Producto Producto { get; set; }
+        public List<Producto> Producto { get; set; }
         #endregion
 
         #region Estimulos

@@ -1,5 +1,6 @@
 ﻿using Ponal.Dinae.Estic.Sicei.DataAccess.Base;
 using Ponal.Dinae.Estic.Sicei.Entities.DTO;
+using Ponal.Dinae.Estic.Sicei.Entities.InvInstitucional;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,12 +21,39 @@ namespace Ponal.Dinae.Estic.Sicei.Business
             }
         }
 
-        public IEnumerable<string> MergeInvestigacion(InvestigacionDTO investigacion)
+        public Tuple<string,string> MergeInvestigacion(InvInstitucional investigacion)
         {
             using(uow = new UOW())
             {
+
                 var resultado = uow.InvestigacionRepository.MergeInvestigacion(investigacion);
-                return resultado;
+                if (resultado.Item1 != "")
+                {
+                    investigacion.IdInvestigacion = resultado.Item1;
+                    foreach (var item in investigacion.AreaLinea)
+                    {
+                        uow.InvestigacionRepository.MergeAreaLineaInv(item, investigacion.IdInvestigacion);
+                    }
+                    foreach (var item in investigacion.Investigadores)
+                    {
+                        uow.InvestigacionRepository.MergeInvestigadoresInv(item, investigacion.IdInvestigacion);
+                    }
+                    foreach (var item in investigacion.Producto)
+                    {
+                        uow.InvestigacionRepository.MergeProductoInv(item, investigacion.IdInvestigacion);
+                    }
+                    uow.InvestigacionRepository.MergeEstimulosInv(investigacion.Estimulos, investigacion.IdInvestigacion);
+                    uow.InvestigacionRepository.MergeEventosInv(investigacion.Eventos, investigacion.IdInvestigacion);
+                    foreach (var item in investigacion.Presupuesto)
+                    {
+                        uow.InvestigacionRepository.MergePresupuestoInv(item, investigacion.IdInvestigacion);
+                    }
+                    
+                } else {
+
+                    return new Tuple<string, string>("0", "Error al crear la investigacion");
+                }                                
+                return  new Tuple<string, string>("1"," OK") ;
             }
         }
 
@@ -46,5 +74,8 @@ namespace Ponal.Dinae.Estic.Sicei.Business
                 return resultado;
             }
         }
+ 
+
+
     }
 }

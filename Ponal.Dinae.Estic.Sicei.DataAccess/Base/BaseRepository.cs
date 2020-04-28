@@ -14,8 +14,7 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Base
     public  class BaseRepository
     {
 
-        //String Con = @"DATA SOURCE=localhost:1521/GLOBAL;PASSWORD=sicei123;USER ID=sicei";
-        String Con = @"DATA SOURCE=localhost:1521/orcl;PASSWORD=sicei123;USER ID=sicei";
+        string Con = @"" + ConfigurationManager.AppSettings["conexion"];
         protected IEnumerable<T> EjecutarProcedure<T>(ProcedimientoParametroDTO param)
         {
             #region Validation Params

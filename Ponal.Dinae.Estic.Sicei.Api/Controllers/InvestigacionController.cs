@@ -1,5 +1,6 @@
 ﻿using Ponal.Dinae.Estic.Sicei.Business;
 using Ponal.Dinae.Estic.Sicei.Entities.DTO;
+using Ponal.Dinae.Estic.Sicei.Entities.InvInstitucional;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("MergeInvestigacion")]
-        public IHttpActionResult MergeInvestigacion(InvestigacionDTO investigacion)
+        public IHttpActionResult MergeInvestigacion([FromBody] InvInstitucional investigacion)
         {
             InvestigacionHandler handler = new InvestigacionHandler();
             try
@@ -76,12 +77,6 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
         }
 
 
-        [HttpPost]
-        [Route("SetInvestigacionInstitucional")]
-        public IHttpActionResult SetInvestigacionInstitucional()
-        {
-
-            return null;
-        }
+     
     }
 }
