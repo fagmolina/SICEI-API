@@ -66,6 +66,26 @@ namespace Ponal.Dinae.Estic.Sicei.Business
             }
         }
 
+        public IEnumerable<Object> EliminarInvestigacionInstitucional(string investigacion)
+        {
+            using (uow = new UOW())
+            {
+                var resultado = uow.InvestigacionRepository.EliminaInvestigacion(investigacion);
+                return resultado;
+            }
+        }
+
+        public IEnumerable<InvestigacionInstitucionalDTO> ConsultarInvestigacionIns()
+        {
+            using (uow = new UOW())
+            {
+                var resultado = uow.InvestigacionRepository.ConsultarInvestigacionIns();
+                return resultado;
+            }
+        }
+
+
+
         public IEnumerable<object> ConsultarCasosEmblem()
         {
             using (uow = new UOW())

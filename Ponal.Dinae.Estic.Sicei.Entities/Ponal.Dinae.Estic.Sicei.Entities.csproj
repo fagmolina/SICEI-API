@@ -47,6 +47,7 @@
     <Compile Include="DTO\CasoEmblematicoDTO.cs" />
     <Compile Include="DTO\GradoDTO.cs" />
     <Compile Include="DTO\InvestigacionDTO.cs" />
+    <Compile Include="DTO\InvestigacionInstitucionalDTO.cs" />
     <Compile Include="DTO\InvestigadorDTO.cs" />
     <Compile Include="DTO\ParametroDTO.cs" />
     <Compile Include="DTO\ProcedimientoParametroDTO.cs" />

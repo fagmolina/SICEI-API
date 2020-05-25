@@ -42,6 +42,7 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
             parametro.AdicionarParametro(":p_participacion", investigacion.Participacion, DireccionParametro.Input, TipoParametro.Varchar2);
             parametro.AdicionarParametro(":p_exp_participa", investigacion.ExParticipa, DireccionParametro.Input, TipoParametro.Varchar2);
             parametro.AdicionarParametro(":p_escuela", investigacion.Escuela, DireccionParametro.Input, TipoParametro.Decimal);
+            parametro.AdicionarParametro(":p_formulario", investigacion.Formulario, DireccionParametro.Input, TipoParametro.Clob);
             parametro.AdicionarParametro(":p_mensaje", null, DireccionParametro.Output, TipoParametro.RefCursor);
 
             var respuesta = EjecutarProcedure<ResultInvInstitucionalDTO>(parametro);
@@ -194,6 +195,36 @@ namespace Ponal.Dinae.Estic.Sicei.DataAccess.Repositories
             parametro.AdicionarParametro(":p_resultado", null, DireccionParametro.Output, TipoParametro.RefCursor);
 
             var respuesta = EjecutarProcedure<InvestigadorDTO>(parametro);
+            if (respuesta == null)
+            {
+                throw new Exception();
+            }
+            return respuesta;
+        }
+
+        public IEnumerable<Object> EliminaInvestigacion(string investigacion)
+        {
+            ProcedimientoParametroDTO parametro = new ProcedimientoParametroDTO();
+
+            parametro.NombreProcedimiento = "PKG_CRUDS.prc_elimina_inv";    
+            parametro.AdicionarParametro(":p_id_investigacion", investigacion, DireccionParametro.Input, TipoParametro.Varchar2);
+            parametro.AdicionarParametro(":p_resultado", null, DireccionParametro.Output, TipoParametro.RefCursor);
+
+            var respuesta = EjecutarProcedure<ResultDTO>(parametro);
+            if (respuesta == null)
+            {
+                throw new Exception();
+            }
+            return respuesta;
+        }
+
+
+        public IEnumerable<InvestigacionInstitucionalDTO> ConsultarInvestigacionIns()
+        {
+            ProcedimientoParametroDTO parametro = new ProcedimientoParametroDTO();
+            parametro.NombreProcedimiento = "PKG_CRUDS.prc_datos_inv";            
+            parametro.AdicionarParametro(":p_resultado", null, DireccionParametro.Output, TipoParametro.RefCursor);
+            var respuesta = EjecutarProcedure<InvestigacionInstitucionalDTO>(parametro);
             if (respuesta == null)
             {
                 throw new Exception();

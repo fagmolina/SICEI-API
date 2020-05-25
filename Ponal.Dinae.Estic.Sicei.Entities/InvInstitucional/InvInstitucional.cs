@@ -17,6 +17,8 @@ namespace Ponal.Dinae.Estic.Sicei.Entities.InvInstitucional
         public string ExParticipa { get; set; }
         public int Escuela { get; set; }
         public int Estado { get; set; }
+
+        public string Formulario { get; set; }
         #endregion
 
         #region Area Linea

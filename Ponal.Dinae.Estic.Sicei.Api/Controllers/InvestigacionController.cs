@@ -14,7 +14,7 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
     /// <summary>
     /// 
     /// </summary>
-    [EnableCors(origins: "*", headers: "*", methods: "*")]   
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Investigacion")]
     public class InvestigacionController : ApiController
     {
@@ -70,13 +70,45 @@ namespace Ponal.Dinae.Estic.Sicei.Api.Controllers
             {
                 return Content(HttpStatusCode.OK, handler.ConsultarInvestigadores());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return Content(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
 
-     
+
+        [HttpDelete]
+        [Route("EliminarInvestigacionInstitucional")]
+        public IHttpActionResult EliminarInvestigacionInstitucional(string investigacion)
+        {
+            InvestigacionHandler handler = new InvestigacionHandler();
+            try
+            {
+                return Content(HttpStatusCode.OK, handler.EliminarInvestigacionInstitucional(investigacion));
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
+
+        [HttpGet]
+        [Route("ConsultarInvestigacionesIns")]
+        public IHttpActionResult ConsultarInvestigacionesIns()
+        {
+            InvestigacionHandler handler = new InvestigacionHandler();
+            try
+            {
+                return Content(HttpStatusCode.OK, handler.ConsultarInvestigacionIns());
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
+
     }
 }
